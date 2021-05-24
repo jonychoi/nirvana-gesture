@@ -1,4 +1,10 @@
 import {drawHand} from "./utilities";
+import * as fp from "fingerpose";
+import { paperGesture } from "./gestures/paper";
+import {rockGesture} from './gestures/rock';
+import {leftGesture} from './gestures/left';
+import {rightGesture} from './gestures/right';
+
 
 export const detect = async (net, webcamRef, canvasRef) => {
     //check data is available
@@ -22,7 +28,29 @@ export const detect = async (net, webcamRef, canvasRef) => {
 
       //make detections
       const hand = await net.estimateHands(video);
-      console.log(hand);
+
+      if (hand.length > 0) {
+        const GE = new fp.GestureEstimator([
+          leftGesture,
+          rightGesture,
+          rockGesture,
+          paperGesture,
+        ]);
+        const gesture = await GE.estimate(hand[0].landmarks, 4);
+        if (gesture.gestures !== undefined && gesture.gestures.length > 0) {
+          console.log(gesture.gestures);
+
+          const confidence = gesture.gestures.map(
+            (prediction) => prediction.confidence
+          );
+          const maxConfidence = confidence.indexOf(
+            Math.max.apply(null, confidence)
+          );
+
+          console.log(gesture.gestures[maxConfidence].name);
+        }
+      }
+
       
 
       //draw mesh
