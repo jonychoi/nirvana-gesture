@@ -6,7 +6,7 @@ import {leftGesture} from './gestures/left';
 import {rightGesture} from './gestures/right';
 
 
-export const detect = async (net, webcamRef, canvasRef) => {
+export const detect = async (net, webcamRef, canvasRef, setGesutre) => {
     //check data is available
     if (
       typeof webcamRef.current !== "undefined" &&
@@ -48,6 +48,7 @@ export const detect = async (net, webcamRef, canvasRef) => {
           );
 
           console.log(gesture.gestures[maxConfidence].name);
+          setGesutre(gesture.gestures[maxConfidence].name);
         }
       }
 

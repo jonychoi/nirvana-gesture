@@ -4,8 +4,11 @@ import * as handpose from "@tensorflow-models/handpose";
 import PoseCanvas from './components/posecanvas';
 import './styles/App.css';
 import {detect} from './detector';
+import Scroller from './components/scroller';
 
 function App() {
+  const [gesture, setGesture] = useState(null);
+
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   
@@ -14,7 +17,7 @@ function App() {
     console.log('Handpose model loaded');
     
     setInterval(() => {
-      detect(net, webcamRef, canvasRef);
+      detect(net, webcamRef, canvasRef, setGesture);
     }, 10);
   };
   
@@ -22,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <PoseCanvas webcamRef={webcamRef} canvasRef={canvasRef} />
+      <Scroller gesture={gesture} />
     </div>
   );
 }
