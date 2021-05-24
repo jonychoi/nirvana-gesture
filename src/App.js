@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useRef, useState, useEffect} from 'react';
+import * as tf from "@tensorflow/tfjs";
+import * as handpose from "@tensorflow-models/handpose";
+import PoseCanvas from './components/posecanvas';
+import './styles/App.css';
+import {detect} from './detector';
 
 function App() {
+  const webcamRef = useRef(null);
+  const canvasRef = useRef(null);
+  
+  const runNirvanaPose = async () => {
+    const net = await handpose.load();
+    console.log('Handpose model loaded');
+    
+    setInterval(() => {
+      detect(net, webcamRef, canvasRef);
+    }, 10);
+  };
+  
+  useEffect(() => {runNirvanaPose()}, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PoseCanvas webcamRef={webcamRef} canvasRef={canvasRef} />
     </div>
   );
 }
