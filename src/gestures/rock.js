@@ -16,5 +16,5 @@ export const rockGesture = new GestureDescription('rock');
 
 for(let finger of [Finger.Thumb, Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]){
     rockGesture.addCurl(finger, FingerCurl.FullCurl, 1); 
-    rockGesture.addDirection(finger, FingerDirection.VerticalDown, 0.25);
+    rockGesture.addDirection(finger, FingerDirection.VerticaDown, 0.55);
 }

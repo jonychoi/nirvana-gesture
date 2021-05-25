@@ -28,6 +28,7 @@ export const detect = async (net, webcamRef, canvasRef, setGesutre) => {
 
       //make detections
       const hand = await net.estimateHands(video);
+      //console.log(hand)
 
       if (hand.length > 0) {
         const GE = new fp.GestureEstimator([
@@ -46,8 +47,8 @@ export const detect = async (net, webcamRef, canvasRef, setGesutre) => {
           const maxConfidence = confidence.indexOf(
             Math.max.apply(null, confidence)
           );
-
-          console.log(gesture.gestures[maxConfidence].name);
+          
+          console.log(gesture.gestures[maxConfidence]);
           setGesutre(gesture.gestures[maxConfidence].name);
         }
       }

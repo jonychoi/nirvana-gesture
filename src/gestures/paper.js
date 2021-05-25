@@ -15,6 +15,6 @@ pinky: [0, 17, 18, 19, 20],
 export const paperGesture = new GestureDescription('paper'); 
 
 for(let finger of [Finger.Thumb, Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]){
-    paperGesture.addCurl(finger, FingerCurl.NoCurl, .9); 
+    paperGesture.addCurl(finger, FingerCurl.NoCurl, 0.9); 
     paperGesture.addDirection(finger, FingerDirection.VerticalUp, 0.9);
 }

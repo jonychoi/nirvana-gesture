@@ -24,8 +24,8 @@ function App() {
   useEffect(() => {runNirvanaPose()}, [])
   return (
     <div className="App">
+            <Scroller gesture={gesture} />
       <PoseCanvas webcamRef={webcamRef} canvasRef={canvasRef} />
-      <Scroller gesture={gesture} />
     </div>
   );
 }
