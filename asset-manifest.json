@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/nirvana-gesture/static/css/main.169de922.chunk.css",
+    "main.js": "/nirvana-gesture/static/js/main.d14253de.chunk.js",
+    "main.js.map": "/nirvana-gesture/static/js/main.d14253de.chunk.js.map",
+    "runtime-main.js": "/nirvana-gesture/static/js/runtime-main.13bace2d.js",
+    "runtime-main.js.map": "/nirvana-gesture/static/js/runtime-main.13bace2d.js.map",
+    "static/js/2.85cf31ea.chunk.js": "/nirvana-gesture/static/js/2.85cf31ea.chunk.js",
+    "static/js/2.85cf31ea.chunk.js.map": "/nirvana-gesture/static/js/2.85cf31ea.chunk.js.map",
+    "index.html": "/nirvana-gesture/index.html",
+    "static/css/main.169de922.chunk.css.map": "/nirvana-gesture/static/css/main.169de922.chunk.css.map",
+    "static/js/2.85cf31ea.chunk.js.LICENSE.txt": "/nirvana-gesture/static/js/2.85cf31ea.chunk.js.LICENSE.txt",
+    "static/media/1.d45df112.jpg": "/nirvana-gesture/static/media/1.d45df112.jpg",
+    "static/media/10.7e8bb2e9.png": "/nirvana-gesture/static/media/10.7e8bb2e9.png",
+    "static/media/11.17512b37.jpg": "/nirvana-gesture/static/media/11.17512b37.jpg",
+    "static/media/2.a6bd5bbb.jpg": "/nirvana-gesture/static/media/2.a6bd5bbb.jpg",
+    "static/media/3.711032e0.jpg": "/nirvana-gesture/static/media/3.711032e0.jpg",
+    "static/media/4.4e78807b.jpg": "/nirvana-gesture/static/media/4.4e78807b.jpg",
+    "static/media/5.f22c965f.jpg": "/nirvana-gesture/static/media/5.f22c965f.jpg",
+    "static/media/6.477caece.jpg": "/nirvana-gesture/static/media/6.477caece.jpg",
+    "static/media/7.e6aa15a8.jpg": "/nirvana-gesture/static/media/7.e6aa15a8.jpg",
+    "static/media/8.c58922f4.jpg": "/nirvana-gesture/static/media/8.c58922f4.jpg",
+    "static/media/9.c1d9f561.jpg": "/nirvana-gesture/static/media/9.c1d9f561.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.13bace2d.js",
+    "static/js/2.85cf31ea.chunk.js",
+    "static/css/main.169de922.chunk.css",
+    "static/js/main.d14253de.chunk.js"
+  ]
+}
