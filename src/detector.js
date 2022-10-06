@@ -28,7 +28,7 @@ export const detect = async (net, webcamRef, canvasRef, setGesutre) => {
 
       //make detections
       const hand = await net.estimateHands(video);
-      //console.log(hand)
+      console.log("this is", hand[0].landmarks)
 
       if (hand.length > 0) {
         const GE = new fp.GestureEstimator([
