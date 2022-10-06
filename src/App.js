@@ -20,7 +20,7 @@ function App() {
     
     setInterval(() => {
       detect(net, webcamRef, canvasRef, setGesture);
-    }, 10);
+    }, 50);
   };
   
   useEffect(() => {runNirvanaPose()}, [])
