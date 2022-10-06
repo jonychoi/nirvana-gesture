@@ -30,14 +30,14 @@ export const Scroller = ({gesture, isLoaded}) => {
                 calculator();
                 setTransition('left 0ms');
             } else if (gesture === "left" && !stop){
-                setTransition('left 550ms');
+                setTransition('left 300ms');
                 setStop(false);
-                let add = position + 20;
+                let add = position + 15;
                 setPosition(add);
             } else if (gesture === "right" && !stop){
-                setTransition('left 550ms');
+                setTransition('left 300ms');
                 setStop(false);
-                let add = position - 20;
+                let add = position - 15;
                 setPosition(add);
             }
         }
