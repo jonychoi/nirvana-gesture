@@ -16,5 +16,5 @@ After the palm detection over the whole image our subsequent hand landmark model
 
 To obtain ground truth data, we have manually annotated ~30K real-world images with 21 3D coordinates, as shown below (we take Z-value from image depth map, if it exists per corresponding coordinate). To better cover the possible hand poses and provide additional supervision on the nature of hand geometry, we also render a high-quality synthetic hand model over various backgrounds and map it to the corresponding 3D coordinates.
 
-![]("./src/images/hand_crops.png")
-![]("./src/images/hand_landmarks.png")
+![]("https://github.com/jonychoi/nirvana-gesture/blob/main/src/images/hand_crops.png")
+![]("https://github.com/jonychoi/nirvana-gesture/blob/main/src/images/hand_landmarks.png")
