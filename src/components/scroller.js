@@ -46,7 +46,7 @@ export const Scroller = ({gesture, isLoaded}) => {
     return (
         <>
             <div style={{width: '100%', height: 300, position: 'relative', display: 'flex', overflowY: 'hidden', overflowX: 'scroll', backgroundColor: 'black', alignItems: 'center', justifyContent: 'center'}}>
-                {!isLoaded && <Text>Detector Loading...</Text>}
+                {!isLoaded && <h3 style={{weight: 700, color: "white"}}>Detector Loading...</h3>}
                 <div ref={width} style={{left: position, transition: transition, position: 'relative', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', justifySelf: 'center', height: '100%'}}>
                     {posters.map((item, index) => <Item select={select} src={item} key={index} id={index} />)}
                 </div>
