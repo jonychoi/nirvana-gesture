@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import Item from './items';
 import posters from '../posters';
 
-export const Scroller = ({gesture}) => {
+export const Scroller = ({gesture, isLoaded}) => {
     const width = useRef(null);
     const [position, setPosition] = useState(0);
     const [stop, setStop] = useState(false);
@@ -46,6 +46,7 @@ export const Scroller = ({gesture}) => {
     return (
         <>
             <div style={{width: '100%', height: 300, position: 'relative', display: 'flex', overflowY: 'hidden', overflowX: 'scroll', backgroundColor: 'black', alignItems: 'center', justifyContent: 'center'}}>
+                {!isLoaded && <Text>Detector Loading...</Text>}
                 <div ref={width} style={{left: position, transition: transition, position: 'relative', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', justifySelf: 'center', height: '100%'}}>
                     {posters.map((item, index) => <Item select={select} src={item} key={index} id={index} />)}
                 </div>

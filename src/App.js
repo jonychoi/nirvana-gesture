@@ -8,6 +8,7 @@ import Scroller from './components/scroller';
 
 function App() {
   const [gesture, setGesture] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -15,6 +16,7 @@ function App() {
   const runNirvanaPose = async () => {
     const net = await handpose.load();
     console.log('Handpose model loaded');
+    setIsLoaded(true)
     
     setInterval(() => {
       detect(net, webcamRef, canvasRef, setGesture);
@@ -24,7 +26,7 @@ function App() {
   useEffect(() => {runNirvanaPose()}, [])
   return (
     <div className="App">
-      <Scroller gesture={gesture} />
+      <Scroller gesture={gesture} isLoaded={isLoaded} />
       <PoseCanvas webcamRef={webcamRef} canvasRef={canvasRef} />
     </div>
   );
