@@ -32,12 +32,12 @@ export const Scroller = ({gesture, isLoaded}) => {
             } else if (gesture === "left" && !stop){
                 setTransition('left ease');
                 setStop(false);
-                let add = position + 1;
+                let add = position + 0.1;
                 setPosition(add);
             } else if (gesture === "right" && !stop){
                 setTransition('left ease');
                 setStop(false);
-                let add = position - 1;
+                let add = position - 0.1;
                 setPosition(add);
             }
         }
