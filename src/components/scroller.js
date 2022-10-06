@@ -28,16 +28,16 @@ export const Scroller = ({gesture, isLoaded}) => {
             } else if (gesture === "rock"){
                 setStop(true);
                 calculator();
-                setTransition('left 0ms');
+                setTransition('left');
             } else if (gesture === "left" && !stop){
-                setTransition('left 500ms');
+                setTransition('left ease');
                 setStop(false);
-                let add = position + 10;
+                let add = position + 1;
                 setPosition(add);
             } else if (gesture === "right" && !stop){
-                setTransition('left 500ms');
+                setTransition('left ease');
                 setStop(false);
-                let add = position - 10;
+                let add = position - 1;
                 setPosition(add);
             }
         }
