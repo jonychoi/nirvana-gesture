@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nirvana-gesture/static/css/main.485a6ab1.chunk.css",
-    "main.js": "/nirvana-gesture/static/js/main.44e8ef0e.chunk.js",
-    "main.js.map": "/nirvana-gesture/static/js/main.44e8ef0e.chunk.js.map",
+    "main.js": "/nirvana-gesture/static/js/main.9d2c48cb.chunk.js",
+    "main.js.map": "/nirvana-gesture/static/js/main.9d2c48cb.chunk.js.map",
     "runtime-main.js": "/nirvana-gesture/static/js/runtime-main.13bace2d.js",
     "runtime-main.js.map": "/nirvana-gesture/static/js/runtime-main.13bace2d.js.map",
     "static/js/2.0399c553.chunk.js": "/nirvana-gesture/static/js/2.0399c553.chunk.js",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.13bace2d.js",
     "static/js/2.0399c553.chunk.js",
     "static/css/main.485a6ab1.chunk.css",
-    "static/js/main.44e8ef0e.chunk.js"
+    "static/js/main.9d2c48cb.chunk.js"
   ]
 }
